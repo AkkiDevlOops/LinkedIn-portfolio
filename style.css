@@ -1,145 +1,138 @@
-*{
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    font-family: "Montserrat";
-}
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+    }
 
-body{
-    font-size: 1.5rem;
-}
+    body {
+        font-size: 1.2rem;
+    }
 
-.head{
-    height: 7rem;
-    display: flex;
-    align-items: center;
-}
+    .head {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
 
-.head img{
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    left: 5rem;
-    align-items: center;
-    border-radius: 50%;
-    border: 2px solid rgb(107, 52, 107);
-}
+    .head img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 2px solid rgb(107, 52, 107);
+    }
 
-.head a{
-    position: absolute;
-    left: 9rem;
-}
+    .head a {
+        justify-content: left;
+        margin-right:  37rem; ;
+        font-weight: bold;
+        color: black;
+    }
 
-a{
-    text-decoration: none;
-}
+    .head input, .head button {
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
 
-.head button{
-    font-size: 1rem;
-    text-align: center;
-    font-weight: 600;
-    height: 2.5rem;
-    width: 6rem;
-    right: 20px;
-    position: absolute;
-    border-radius: 4px;
-}
+    .head button:hover {
+        box-shadow: 2px 2px black;
+        cursor: pointer;
+    }
 
-.head button:hover{
-    box-shadow:  4px 4px black;
-}
+    hr {
+        margin: 0.5rem 0;
+        height: 1px;
+        background-color: black;
+    }
 
-.head input{
-    font-size: 1rem;
-    height: 2.2rem;
-    border-radius: 4px;
-    padding: 2px;
-    width: 12rem;
-    right: 8.5rem;
-    position: absolute;
-}
+    .headline {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
 
-hr{
-    height: 1px;
-    background-color: black;
-}
+    h4 {
+        margin: 1rem;
+        text-align: center;
+    }
 
-.headline{
-    height: 10rem;
-    margin-left: 15px;
-    display: flex;
-    align-items: center;
-}
+    .middle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
 
-h4{
-    margin: 20px;
-}
+    .middle div {
+        flex: 0 1 300px;
+        height: 400px;
+        border-radius: 15px;
+        background-size: cover;
+        background-position: center;
+        transition: box-shadow 0.3s ease;
+    }
 
-.middle{
-    height: 32rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+    .middle div:hover {
+        box-shadow: 4px 4px black;
+    }
 
-.middle div{
-    height: 25rem;
-    width: 17rem;
-    border-radius: 15px;
-}
+    .bottom {
+        text-align: center;
+        padding: 1rem;
+    }
 
-.middle div:hover{
-    box-shadow:  4px 4px black;
-} 
+    .bottom p {
+        font-family: "Grechen Fuemen", cursive;
+        margin-bottom: 0.5rem;
+    }
 
-.middle .img{
-    height: 100%;
-    width: 100%;
-    border-bottom-right-radius: none;
-    border-bottom-left-radius: none;
-}
+    .bottom a {
+        margin-left: 10em;
+        display: inline-block;
+        color: #000;
+    }
 
-.middle .img:hover{
-    box-shadow: none;
-} 
+    .card1 {
+        background-image: url('https://github.com/AkkiDevlOops/Akkifiles/blob/main/Screenshot%202025-06-15%20003246.png?raw=true');
+    }
 
-.bottom{
-    height:3rem;
-}
+    .card2 {
+        background-image: url('https://github.com/AkkiDevlOops/Akkifiles/blob/main/WhatsApp%20Image%202025-06-14%20at%2023.51.16_9497be70.jpg?raw=true');
+    }
 
-.bottom p{
-    position: absolute;
-    left: 20px;
-    display: inline-block;
-    font-family: "Grechen Fuemen";
-}
+    .card3 {
+        background-image: url('https://github.com/AkkiDevlOops/Akkifiles/blob/main/collage.jpg?raw=true');
+    }
 
-.bottom a{
-    position: absolute;
-    left: 9rem;
-}
+    @media (max-width: 768px) {
+        .head {
+            flex-direction: column;
+            gap: 0.5rem;
+            text-align: center;
+        }
 
-#link{
-    position: absolute;
-    left: 50%;
-}
+        .headline h2 {
+            font-size: 1.2rem;
+        }
 
-#insta{
-    position: absolute;
-    left: 85%;
-}
+        .middle div {
+            height: 300px;
+        }
+    }
 
-.card3{
-    background-image: url(https://github.com/AkkiDevlOops/Akkifiles/blob/main/collage.jpg?raw=true);
-    background-size: cover;
-}
+    @media (max-width: 480px) {
+        .middle div {
+            flex: 0 1 90%;
+            height: 250px;
+        }
 
-.card2{
-    background-image: url(https://github.com/AkkiDevlOops/Akkifiles/blob/main/WhatsApp%20Image%202025-06-14%20at%2023.51.16_9497be70.jpg?raw=true);
-    background-size: cover;
-} 
-
-.card1{
-    background-image: url(https://github.com/AkkiDevlOops/Akkifiles/blob/main/Screenshot%202025-06-15%20003246.png?raw=true);
-    background-size: contain;
-}
+        .head input, .head button {
+            width: 100%;
+        }
+    }
