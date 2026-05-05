@@ -11,13 +11,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Grechen+Fuemen&family=Montserrat:ital,wght@0,100..900;1,100..900&family=National+Park:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="style.css" />
+
+
+
 </head>
 <body>
     <div class="head">
     <img src="https://avatars.githubusercontent.com/u/196622325?v=4"/>
     <a href="">Akk!</a>
-    <input type="email" placeholder="E-mail">
-    <button>Subscribe</button>
+
+    <input type="email" id="email" placeholder="E-mail" autocomplete="email">
+
+
+    <button onclick="sendEmail()">Subscribe</button>
     </div>
     <hr>
     <div class="headline">
@@ -39,5 +45,30 @@
     <a href="https://www.linkedin.com/in/akki565/" id="link">linkedin</a>
     <a href="https://www.instagram.com/akkidevloops/" id="insta">instagram</a>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("wBYlhxetu8OH31a6q"); // your public key
+})();
+
+function sendEmail(){
+    let userEmail = document.getElementById("email").value;
+
+    if(userEmail){
+        emailjs.send("AkkiDevlOops", "template_cpdb75h", {
+            to_email: userEmail,
+        }).then(function(response) {
+            alert("Email sent!");
+        }, function(error) {
+            alert("Failed to send");
+        });
+    } else {
+        alert("Email not allowed");
+    }
+}
+</script>
+
 </body>
 </html>
